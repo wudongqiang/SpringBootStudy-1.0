@@ -31,24 +31,11 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public List<User> getUserAlls() {
-        return jdbcTemplate.query("select id,age,name from user ;", (rs,i) ->{
-            User u = new User();
-            u.setId(rs.getLong("id"));
-            u.setName(rs.getString("name"));
-            u.setAge(rs.getInt("age"));
-            return u;
-        });
+        return jdbcTemplate.query("select id,age,name from user ;", new User());
     }
 
     @Override
     public User getUserById(Long id) {
-        return jdbcTemplate.queryForObject("select id,age,name from user where id=?", new Object[]{id},
-                (rs,i) ->{
-                    User u = new User();
-                    u.setId(rs.getLong("id"));
-                    u.setName(rs.getString("name"));
-                    u.setAge(rs.getInt("age"));
-                    return u;
-                });
+        return jdbcTemplate.queryForObject("select id,age,name from user where id=?", new Object[]{id},new User());
     }
 }
