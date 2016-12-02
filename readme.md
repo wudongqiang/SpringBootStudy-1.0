@@ -1,7 +1,7 @@
 #1.**配置springboot依赖**
 
 #2. 添加 swagger2
-    ###2.1. 添加依赖
+###2.1. 添加依赖
         <dependency>
           <groupId>io.springfox</groupId>
           <artifactId>springfox-swagger2</artifactId>
@@ -12,7 +12,7 @@
           <artifactId>springfox-swagger-ui</artifactId>
           <version>2.2.2</version>
         </dependency>
-     ###2.2. 添加配置swagger2类
+###2.2. 添加配置swagger2类
          @Configuration
          @EnableSwagger2
          public class Swagger2 {
@@ -36,7 +36,7 @@
              }
          }
 
-    ###2.3. 使用
+###2.3. 使用
     通过@ApiOperation注解来给API增加说明、通过@ApiImplicitParams、@ApiImplicitParam注解来给参数增加说明。
 
 #3.添加aop依赖
