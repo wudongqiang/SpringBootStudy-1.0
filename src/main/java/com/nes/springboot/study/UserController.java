@@ -17,20 +17,8 @@ import java.util.*;
 @Api(tags = {"xxxx","bbb"})
 public class UserController {
 
-    @Autowired
-    private DiscoveryClient discoveryClient;
-
     //创建线程安全的map
     private static Map<Long,User> users = Collections.synchronizedMap(new HashMap<Long, User>());
-
-
-    @RequestMapping(value = "/cloud/add" ,method = RequestMethod.GET)
-    public Integer add(@RequestParam Integer a, @RequestParam Integer b) {
-        ServiceInstance instance = discoveryClient.getLocalServiceInstance();
-        Integer r = a + b;
-        System.out.println("/add, host:" + instance.getHost() + ", service_id:" + instance.getServiceId() + ", result:" + r);
-        return r;
-    }
 
     //获取用户集
     @ApiOperation(value="获取用户列表", notes="这是说明")
