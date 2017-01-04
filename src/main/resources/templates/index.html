@@ -3,10 +3,30 @@
 <head>
     <meta charset="UTF-8"/>
     <title>thymeleaf test</title>
+
+    <script src="http://static.blog.csdn.net/scripts/jquery.js" type="text/javascript"></script>
+    <script>
+        function ajax() {
+            $.post("http://localhost:2222/demo/test",
+                    {a:$("#a").val()},
+                    function(result){
+                        alert(result)
+                    });
+        }
+    </script>
 </head>
 <body>
 
     <h1 th:text="${show}">hello</h1>
 
+    <form action="http://localhost:2222/demo/test" method="post">
+        <input type="text" name="a" id="a" /><br/>
+        <input type="submit" value="提交"/>
+    </form>
+
+    <br/>
+    <span></span>
+    <input type="button" value="ajax" onclick="ajax()"/>
 </body>
+
 </html>

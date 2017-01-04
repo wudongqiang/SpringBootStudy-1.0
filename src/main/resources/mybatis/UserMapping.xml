@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nes.springboot.mapper.UserMapper">
+    <resultMap id="userMapper" type="com.nes.springboot.domain.User">
+        <id column="id" property="id"/>
+        <result column="age" property="age" />
+        <result column="name" property="name"/>
+    </resultMap>
+
+    <select id="getUserAll" resultMap="userMapper">
+       SELECT * from user
+    </select>
+</mapper>
+
