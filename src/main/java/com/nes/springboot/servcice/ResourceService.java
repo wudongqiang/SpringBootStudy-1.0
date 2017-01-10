@@ -16,4 +16,16 @@ public interface ResourceService {
     Resource getResource(String uuId);
 
     void updateResource(Resource resource);
+
+    void deleteResource(String uuId);
+
+    List<Resource> findResourceAllDb();
+
+    void addResourceDb(Resource resource);
+
+    Resource getResourceDb(String uuId);
+
+    void updateResourceDb(Resource resource);
+
+    void deleteResourceDb(String uuId);
 }

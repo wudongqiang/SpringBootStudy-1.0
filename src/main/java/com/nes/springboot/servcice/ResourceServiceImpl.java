@@ -1,9 +1,12 @@
 package com.nes.springboot.servcice;
 
 import com.google.gson.*;
+import com.nes.springboot.dao.ResourceDao;
 import com.nes.springboot.domain.Resource;
 import com.nes.springboot.util.FileUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -16,6 +19,8 @@ import java.util.UUID;
 @Service
 public class ResourceServiceImpl implements ResourceService {
 
+    @Autowired
+    private ResourceDao resourceDao;
 
     private List<Resource> jsonArrayToList(String content){
         List<Resource> resources = new ArrayList<>();
@@ -80,5 +85,44 @@ public class ResourceServiceImpl implements ResourceService {
             }
         }
         FileUtils.writeFile(new Gson().toJson(resources));
+    }
+
+    @Override
+    public void deleteResource(String uuId) {
+        List<Resource> resources = findResourceAll();
+        for(Resource res : resources){
+            if(res.getUuId().equals(uuId)){
+                resources.remove(res);
+            }
+        }
+        FileUtils.writeFile(new Gson().toJson(resources));
+    }
+
+    @Override
+    public List<Resource> findResourceAllDb() {
+        return resourceDao.findAll();
+    }
+
+    @Override
+    public void addResourceDb(Resource resource) {
+        resource.setUuId(UUID.randomUUID().toString());
+        resourceDao.save(resource);
+    }
+
+    @Override
+    public Resource getResourceDb(String uuId) {
+        return resourceDao.findOne(uuId);
+    }
+
+    @Override
+    public void updateResourceDb(Resource resource) {
+        if(!StringUtils.isEmpty(resource.getUuId())){
+            resourceDao.save(resource);
+        }
+    }
+
+    @Override
+    public void deleteResourceDb(String uuId) {
+        resourceDao.delete(uuId);
     }
 }

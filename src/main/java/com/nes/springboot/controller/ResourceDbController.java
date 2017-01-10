@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.*;
  * Created by wdq on 17-1-9.
  */
 @RestController
-@RequestMapping("/resource")
-public class ResourceController {
+@RequestMapping("/resource/db/")
+public class ResourceDbController {
 
     @Autowired
     private ResourceService resourceService;
@@ -21,31 +21,32 @@ public class ResourceController {
     @GetMapping("/all")
     @ApiOperation("获取所有")
     public ResponseEntity<Resource> getResourceALL(){
-        return new ResponseEntity(resourceService.findResourceAll(), HttpStatus.OK);
+        return new ResponseEntity(resourceService.findResourceAllDb(), HttpStatus.OK);
     }
 
     @ApiOperation("添加")
     @PutMapping("/add")
     public ResponseEntity addResource(@RequestBody Resource resource){
-        resourceService.addResource(resource);
+        resourceService.addResourceDb(resource);
         return new ResponseEntity(HttpStatus.OK);
     }
 
     @GetMapping("/get/{uuId}")
     public ResponseEntity<Resource> getResource(@RequestParam("uuId") String uuId){
-        return new ResponseEntity(resourceService.getResource(uuId),HttpStatus.OK);
+        return new ResponseEntity(resourceService.getResourceDb(uuId),HttpStatus.OK);
     }
 
     @PostMapping("/update/{uuId}")
     public ResponseEntity updateResource(@RequestBody Resource resource){
-        resourceService.updateResource(resource);
+        resourceService.updateResourceDb(resource);
         return new ResponseEntity(HttpStatus.OK);
     }
 
     @DeleteMapping("/del/{uuId}")
     public ResponseEntity delResource(@RequestParam("uuId") String uuId){
-        resourceService.deleteResource(uuId);
+        resourceService.deleteResourceDb(uuId);
         return new ResponseEntity(HttpStatus.OK);
     }
+
 
 }
