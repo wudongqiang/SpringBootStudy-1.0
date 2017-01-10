@@ -7,3 +7,5 @@ CREATE TABLE resource(
 );
 
 select * from resource
+
+ALTER TABLE resource ADD port varchar(4);

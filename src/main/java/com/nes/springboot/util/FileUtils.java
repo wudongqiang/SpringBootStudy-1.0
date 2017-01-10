@@ -71,9 +71,9 @@ public class FileUtils {
     public static void main(String[] args) {
 
         List<Resource> list = new ArrayList<>();
-        list.add(new Resource(UUID.randomUUID().toString(),"xxxx","aaaa"));
-        list.add(new Resource(UUID.randomUUID().toString(),"111","22"));
-        list.add(new Resource(UUID.randomUUID().toString(),"cc","dd"));
+        list.add(new Resource(UUID.randomUUID().toString(),"xxxx","aaaa","8080"));
+        list.add(new Resource(UUID.randomUUID().toString(),"111","22","8081"));
+        list.add(new Resource(UUID.randomUUID().toString(),"cc","dd","8082"));
         Gson gson = new Gson();
 
         writeFile(gson.toJson(list));

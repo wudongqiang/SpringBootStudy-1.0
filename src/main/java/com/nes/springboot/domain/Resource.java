@@ -25,13 +25,18 @@ public class Resource {
     @ApiModelProperty(value = "名称", example = "本地测试地址")
     private String name;
 
+    @ApiModelProperty(value = "端口",example = "8080")
+    @Column(name = "port")
+    private String port;
+
     public Resource() {
     }
 
-    public Resource(String uuId, String url, String name) {
+    public Resource(String uuId, String url, String name,String port) {
         this.uuId = uuId;
         this.url = url;
         this.name = name;
+        this.port = port;
     }
 
     public String getUuId() {
@@ -56,5 +61,13 @@ public class Resource {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getPort() {
+        return port;
+    }
+
+    public void setPort(String port) {
+        this.port = port;
     }
 }

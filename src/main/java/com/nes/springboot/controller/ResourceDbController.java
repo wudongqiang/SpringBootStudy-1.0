@@ -36,7 +36,7 @@ public class ResourceDbController {
         return new ResponseEntity(resourceService.getResourceDb(uuId),HttpStatus.OK);
     }
 
-    @PostMapping("/update/{uuId}")
+    @PostMapping("/update")
     public ResponseEntity updateResource(@RequestBody Resource resource){
         resourceService.updateResourceDb(resource);
         return new ResponseEntity(HttpStatus.OK);
