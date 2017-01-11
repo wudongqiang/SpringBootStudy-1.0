@@ -1,382 +1,98 @@
-{
-  "corpDetail": {
-    "data": {
-      "province": "",
-      "alterList": [
-        {
-          "altAf": "自然人股东变更",
-          "altBe": "无",
-          "altDate": "2010-12-21",
-          "altItem": "其他变更",
-          "eventId": null
-        },
-        {
-          "altAf": "400.000000",
-          "altBe": "50.000000",
-          "altDate": "2010-12-21",
-          "altItem": "其他变更",
-          "eventId": null
-        },
-        {
-          "altAf": "销售：化肥；生产、销售：复合肥、有机肥料、复混肥料。**国家法律、法规禁止经营的不得经营；国家法律、法规规定应经审批而未获审批前不得经营**",
-          "altBe": "生产、销售：复合肥、有机肥料、复混肥料；销售：化肥（按化肥经营许可证核定的有效期限范围从事经营）。**国家法律、法规禁止经营的不得经营；国家法律、法规规定应经审批而未获审批前不得经营**",
-          "altDate": "2010-12-21",
-          "altItem": "其他变更",
-          "eventId": null
-        },
-        {
-          "altAf": "（无）。",
-          "altBe": "无",
-          "altDate": "2010-12-21",
-          "altItem": "其他变更",
-          "eventId": null
-        },
-        {
-          "altAf": "验资报告",
-          "altBe": "无",
-          "altDate": "2010-12-21",
-          "altItem": "其他变更",
-          "eventId": null
-        },
-        {
-          "altAf": "400.000000",
-          "altBe": "50.000000",
-          "altDate": "2010-12-21",
-          "altItem": "注册资本(金)变更",
-          "eventId": null
-        },
-        {
-          "altAf": "生产、销售：复合肥、有机肥料、复混肥料；销售：化肥（按化肥经营许可证核定的有效期限范围从事经营）。**国家法律、法规禁止经营的不得经营；国家法律、法规规定应经审批而未获审批前不得经营**",
-          "altBe": "生产、销售：复合肥、有机肥料、复混肥料。**国家法律、法规禁止经营的不得经营；国家法律、法规规定应经审批而未获审批前不得经营**",
-          "altDate": "2009-03-30",
-          "altItem": "其他变更",
-          "eventId": null
-        },
-        {
-          "altAf": "前置许可",
-          "altBe": "无",
-          "altDate": "2009-03-30",
-          "altItem": "",
-          "eventId": null
-        },
-        {
-          "altAf": "500112000038563",
-          "altBe": "5001122106938",
-          "altDate": "2008-07-15",
-          "altItem": "其他变更",
-          "eventId": null
-        },
-        {
-          "altAf": "生产、销售：复合肥、有机肥料、复混肥料。**国家法律、法规禁止经营的不得经营；国家法律、法规规定应经审批而未获审批前不得经营**",
-          "altBe": "生产、销售：复合肥。**国家法律、法规禁止经营的不得经营；国家法律、法规规定应经审批而未获审批前不得经营**",
-          "altDate": "2008-07-15",
-          "altItem": "其他变更",
-          "eventId": null
-        },
-        {
-          "altAf": "自然人股东变更",
-          "altBe": "无",
-          "altDate": "2008-07-15",
-          "altItem": "其他变更",
-          "eventId": null
-        },
-        {
-          "altAf": "三会",
-          "altBe": "无",
-          "altDate": "2008-07-15",
-          "altItem": "其他变更",
-          "eventId": null
-        }
-      ],
-      "basicList": [
-        {
-          "unit": "万",
-          "regNo": "500112000038563",
-          "esDate": "2007-04-30",
-          "frName": "张长蓉",
-          "openTo": "长期",
-          "recCap": "400.0",
-          "regCap": "400.0",
-          "regOrg": "重庆市渝北区工商行政管理局",
-          "abuItem": "",
-          "address": "重庆市渝北区王家镇新桥村十九社朝凤湾",
-          "cbuItem": "",
-          "openFrom": "2007-04-30",
-          "oriRegNo": "",
-          "ancheDate": "2013-06-28",
-          "ancheYear": "2012",
-          "regCapCur": "人民币",
-          "cancelDate": "",
-          "revokeDate": "",
-          "industryCode": "2624",
-          "industryName": "复混肥料制造",
-          "operateScope": "销售：化肥；生产、销售：复合肥、有机肥料、复混肥料。**国家法律、法规禁止经营的不得经营；国家法律、法规规定应经审批而未获审批前不得经营**",
-          "enterpriseName": "重庆渝宁化肥有限公司",
-          "enterpriseType": "有限责任公司(自然人投资或控股)",
-          "industryPhyCode": "C",
-          "industryPhyName": "制造业",
-          "enterpriseStatus": "在营（开业）",
-          "operateScopeAndForm": "销售：化肥；生产、销售：复合肥、有机肥料、复混肥料。**国家法律、法规禁止经营的不得经营；国家法律、法规规定应经审批而未获审批前不得经营**",
-          "socialCreditIdentifier": ""
-        }
-      ],
-      "frinvList": [
-        {
-          "regNo": "500112000124192",
-          "esDate": "2011-06-15",
-          "frName": "胡洪",
-          "regCap": "50.000000",
-          "regOrg": "重庆市渝北区工商行政管理局",
-          "canDate": "",
-          "entName": "重庆长宏农资有限公司",
-          "entType": "有限责任公司(自然人投资或控股)",
-          "revDate": "",
-          "currency": "人民币",
-          "subConam": "20.000000",
-          "entStatus": "在营（开业）",
-          "regCapCar": "",
-          "fundedRatio": "40.00%"
-        }
-      ],
-      "personList": [
-        {
-          "sex": "女",
-          "name": "易重琼",
-          "position": "监事"
-        },
-        {
-          "sex": "女",
-          "name": "张长蓉",
-          "position": "执行董事,其他人员"
-        }
-      ],
-      "shixinList": [],
-      "alidebtList": [],
-      "caseInfoList": [],
-      "checkMessage": [],
-      "executedList": [],
-      "punishedList": [],
-      "filiationList": [],
-      "morDetailList": [],
-      "entinvItemList": [],
-      "frPositionList": [
-        {
-          "regNo": "500112000124192",
-          "esDate": "2011-06-15",
-          "frName": "胡洪",
-          "regCap": "50.000000",
-          "regOrg": "重庆市渝北区工商行政管理局",
-          "canDate": "",
-          "entName": "重庆长宏农资有限公司",
-          "entType": "有限责任公司(自然人投资或控股)",
-          "revDate": "",
-          "position": "监事",
-          "entStatus": "在营（开业）",
-          "lerepsign": "否",
-          "regCapCur": "人民币"
-        }
-      ],
-      "morguaInfoList": [],
-      "yearReportList": [
-        {
-          "year": "2013",
-          "website": {
-            "link": "http://www.ampcn.com/show/index.asp?id=223202",
-            "name": "重庆渝宁化肥有限公司",
-            "type": "网站"
-          },
-          "baseInfo": {
-            "email": "无",
-            "phone": "13098773788",
-            "regNo": "500112000038563",
-            "address": "重庆市渝北区王家镇新桥村十九社朝凤湾",
-            "zipcode": "401124",
-            "buyEquity": "否",
-            "haveWebsite": "是",
-            "employeeCount": "25",
-            "equityTransfer": "否",
-            "enterpriseStatus": "歇业"
-          },
-          "assetsInfo": {
-            "profit": "-20.985",
-            "revenue": "86.219",
-            "liability": "-20.985",
-            "netProfit": "-20.985",
-            "taxPayment": "0.1551",
-            "mainRevenue": "86.219",
-            "generalAssets": "335.435",
-            "ownersEequity": "335.435"
-          },
-          "websiteList": [
-            {
-              "link": "http://www.ampcn.com/show/index.asp?id=223202",
-              "name": "重庆渝宁化肥有限公司",
-              "type": "网站"
-            }
-          ],
-          "changeRecords": [],
-          "investorInformations": [
-            {
-              "paidTime": "2012-12-20",
-              "paidType": "货币",
-              "subConam": "80.0",
-              "subConDate": "2010-12-20",
-              "subConType": "货币",
-              "paidConMoney": "80.0",
-              "shareholderName": "胡贤玲"
-            }
-          ],
-          "equityChangeInformations": []
-        }
-      ],
-      "liquidationList": [],
-      "punishBreakList": [],
-      "shareHolderList": [
-        {
-          "conDate": "2007-04-27",
-          "country": "中国",
-          "subConam": "80.0",
-          "regCapCur": "人民币",
-          "fundedRatio": "20.00%",
-          "shareholderName": "胡贤玲"
-        },
-        {
-          "conDate": "2007-04-27",
-          "country": "中国",
-          "subConam": "320.0",
-          "regCapCur": "人民币",
-          "fundedRatio": "80.00%",
-          "shareholderName": "张长蓉"
-        }
-      ],
-      "sharesFrostList": [],
-      "sharesImpawnList": [
-        {
-          "impAm": "80",
-          "impTo": "",
-          "impoRg": "重庆西南中小企业融资担保有限公司",
-          "impExaeep": "500112",
-          "impSanDate": "2013-03-21",
-          "impoRgtype": "",
-          "imponrecDate": "2013-03-21"
-        }
-      ],
-      "abnormalOperation": [
-        {
-          "decorg": "重庆市工商行政管理局渝北区分局",
-          "retime": "",
-          "abntime": "2015-07-03 00:00:00",
-          "eventId": null,
-          "recause": "",
-          "specause": "未依照《企业信息公示暂行条例》第八条规定的期限公示年度报告",
-          "specauseno": "1"
-        }
-      ]
-    },
-    "name": "重庆渝宁化肥有限公司",
-    "regNo": "500112000038563",
-    "source": "YOU_SHU"
+[
+  {
+    "uuId": "7ffba8b4-c86e-4dd4-be25-c9d35feb2df6",
+    "url": "jdbc:postgresql://192.168.31.157:5432/monitor_test",
+    "name": "烽火台本地pg数据库地址（monitor_test，1qaz2wsx）",
+    "port": "5432"
   },
-  "analysisData": {
-    "result": [
-      {
-        "data": [
-          {
-            "name": "资本分析",
-            "value": "注册资本增长了350.0万; 增幅达700.0%; 变更时间:2010-12-21 00:00:00;"
-          }
-        ],
-        "desc": " 注册资本数倍增长",
-        "name": "重庆渝宁化肥有限公司",
-        "score": 52.285512352270956,
-        "rating": "C 风险中等",
-        "alterList": [
-          {
-            "altAf": "自然人股东变更",
-            "altBe": "无",
-            "altDate": "2010-12-21",
-            "altItem": "其他变更",
-            "altType": "其他变更"
-          },
-          {
-            "altAf": "400.000000",
-            "altBe": "50.000000",
-            "altDate": "2010-12-21",
-            "altItem": "其他变更",
-            "altType": "其他变更"
-          },
-          {
-            "altAf": "销售：化肥；生产、销售：复合肥、有机肥料、复混肥料。**国家法律、法规禁止经营的不得经营；国家法律、法规规定应经审批而未获审批前不得经营**",
-            "altBe": "生产、销售：复合肥、有机肥料、复混肥料；销售：化肥（按化肥经营许可证核定的有效期限范围从事经营）。**国家法律、法规禁止经营的不得经营；国家法律、法规规定应经审批而未获审批前不得经营**",
-            "altDate": "2010-12-21",
-            "altItem": "其他变更",
-            "altType": "其他变更"
-          },
-          {
-            "altAf": "（无）。",
-            "altBe": "无",
-            "altDate": "2010-12-21",
-            "altItem": "其他变更",
-            "altType": "其他变更"
-          },
-          {
-            "altAf": "验资报告",
-            "altBe": "无",
-            "altDate": "2010-12-21",
-            "altItem": "其他变更",
-            "altType": "其他变更"
-          },
-          {
-            "altAf": "400.000000",
-            "altBe": "50.000000",
-            "altDate": "2010-12-21",
-            "altItem": "注册资本(金)变更",
-            "altType": "资本变更"
-          },
-          {
-            "altAf": "生产、销售：复合肥、有机肥料、复混肥料；销售：化肥（按化肥经营许可证核定的有效期限范围从事经营）。**国家法律、法规禁止经营的不得经营；国家法律、法规规定应经审批而未获审批前不得经营**",
-            "altBe": "生产、销售：复合肥、有机肥料、复混肥料。**国家法律、法规禁止经营的不得经营；国家法律、法规规定应经审批而未获审批前不得经营**",
-            "altDate": "2009-03-30",
-            "altItem": "其他变更",
-            "altType": "其他变更"
-          },
-          {
-            "altAf": "前置许可",
-            "altBe": "无",
-            "altDate": "2009-03-30",
-            "altItem": "",
-            "altType": "其他变更"
-          },
-          {
-            "altAf": "500112000038563",
-            "altBe": "5001122106938",
-            "altDate": "2008-07-15",
-            "altItem": "其他变更",
-            "altType": "其他变更"
-          },
-          {
-            "altAf": "生产、销售：复合肥、有机肥料、复混肥料。**国家法律、法规禁止经营的不得经营；国家法律、法规规定应经审批而未获审批前不得经营**",
-            "altBe": "生产、销售：复合肥。**国家法律、法规禁止经营的不得经营；国家法律、法规规定应经审批而未获审批前不得经营**",
-            "altDate": "2008-07-15",
-            "altItem": "其他变更",
-            "altType": "其他变更"
-          },
-          {
-            "altAf": "自然人股东变更",
-            "altBe": "无",
-            "altDate": "2008-07-15",
-            "altItem": "其他变更",
-            "altType": "其他变更"
-          },
-          {
-            "altAf": "三会",
-            "altBe": "无",
-            "altDate": "2008-07-15",
-            "altItem": "其他变更",
-            "altType": "其他变更"
-          }
-        ]
-      }
-    ]
+  {
+    "uuId": "f540b2e2-6585-4841-a16c-9d407d178a52",
+    "url": "http://192.168.31.116:6060/swagger-ui.html",
+    "name": "烽火台 1.6后的API文档（包括PC端和APP）",
+    "port": "6060"
+  },
+  {
+    "uuId": "3d43070d-1eec-46e2-a05f-083522bdbda8",
+    "url": "http://192.168.31.121",
+    "name": "本地redis地址",
+    "port": "6379"
+  },
+  {
+    "uuId": "f7afe2fe-2abd-454d-9cbf-19c305197705",
+    "url": "http://test-fenghuo.socialcredits.cn/login",
+    "name": "线上测试地址",
+    "port": "80"
+  },
+  {
+    "uuId": "5f286780-e946-49bd-a9b5-dfe1015c045a",
+    "url": "http://fenghuo.socialcredits.cn/login",
+    "name": "线上正式地址",
+    "port": "80"
+  },
+  {
+    "uuId": "e67ed980-c671-489f-9962-af104fae2de3",
+    "url": "http://info.dai189.com/",
+    "name": "电信烽火台的正式环境",
+    "port": "80"
+  },
+  {
+    "uuId": "79800bf6-2c4e-4f8a-bbb9-d5d7d670a0ac",
+    "url": "http://test-admin-fht.socialcredits.cn/",
+    "name": "线上测试环境-大后台",
+    "port": "80"
+  },
+  {
+    "uuId": "28aa5081-0b26-4ffe-8bce-52d97870027a",
+    "url": "http://admin-fht.socialcredits.cn/",
+    "name": "线上正式环境-大后台",
+    "port": "80"
+  },
+  {
+    "uuId": "84d2b20b-0cca-477b-b1f0-0c9fbc401df5",
+    "url": "www.touwenbaoda.com",
+    "name": "报答正式",
+    "port": "80"
+  },
+  {
+    "uuId": "cca6c64c-d654-469b-b42d-7c042cad25a5",
+    "url": "test.touwenbaoda.com",
+    "name": "报答线上测试",
+    "port": "80"
+  },
+  {
+    "uuId": "d05de478-e030-48ed-95f9-2aff63e291f0",
+    "url": "http://192.168.31.116/",
+    "name": "本地git",
+    "port": "80"
+  },
+  {
+    "uuId": "f7a794b9-cd0b-48cb-8b3f-10145112eb70",
+    "url": "http://192.168.31.121:8002/login",
+    "name": "本地测试地址",
+    "port": "8002"
+  },
+  {
+    "uuId": "1af9fdab-d30e-4514-bbb4-532fbe22d9e2",
+    "url": "http://192.168.31.121",
+    "name": "本地测试地址",
+    "port": "8080"
+  },
+  {
+    "uuId": "6422ab60-4a2e-442e-b065-99861f76fa60",
+    "url": "http://192.168.31.121:8102/",
+    "name": "本地环境-大后台",
+    "port": "8102"
+  },
+  {
+    "uuId": "71fda7d2-4b2e-4177-a19c-31faa91dbfa9",
+    "url": "http://192.168.31.121:9005/crawler_api/",
+    "name": "爬虫相关API",
+    "port": "9005"
+  },
+  {
+    "uuId": "174560b5-a340-4e3c-b0c0-8f396e19ca48",
+    "url": "http://192.168.31.121:9090/jenkins/",
+    "name": "本地jenkins地址",
+    "port": "9090"
   }
-}
+]

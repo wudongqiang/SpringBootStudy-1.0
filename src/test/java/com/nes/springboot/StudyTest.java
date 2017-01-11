@@ -34,5 +34,14 @@ public class StudyTest {
 
     }
 
+    public static void main(String[] args) {
+        String a = "a";
+        change(a);
+        System.out.println(a);
+    }
 
+    static void change(String a){
+        a += "b";
+        System.out.println(a);
+    }
 }

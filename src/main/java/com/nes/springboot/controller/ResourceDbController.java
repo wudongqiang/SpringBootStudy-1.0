@@ -8,6 +8,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 /**
  * Created by wdq on 17-1-9.
  */
@@ -26,8 +28,8 @@ public class ResourceDbController {
 
     @ApiOperation("添加")
     @PutMapping("/add")
-    public ResponseEntity addResource(@RequestBody Resource resource){
-        resourceService.addResourceDb(resource);
+    public ResponseEntity addResource(@RequestBody List<Resource> resources){
+        resourceService.addResourceDb(resources);
         return new ResponseEntity(HttpStatus.OK);
     }
 

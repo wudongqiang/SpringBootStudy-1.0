@@ -21,7 +21,7 @@ public interface ResourceService {
 
     List<Resource> findResourceAllDb();
 
-    void addResourceDb(Resource resource);
+    void addResourceDb(List<Resource> resource);
 
     Resource getResourceDb(String uuId);
 

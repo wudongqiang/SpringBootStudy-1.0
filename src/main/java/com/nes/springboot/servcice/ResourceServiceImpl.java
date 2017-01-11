@@ -106,9 +106,11 @@ public class ResourceServiceImpl implements ResourceService {
     }
 
     @Override
-    public void addResourceDb(Resource resource) {
-        resource.setUuId(UUID.randomUUID().toString());
-        resourceDao.save(resource);
+    public void addResourceDb(List<Resource> resources) {
+        resources.forEach(item ->{
+            item.setUuId(UUID.randomUUID().toString());
+            resourceDao.save(item);
+        });
     }
 
     @Override
