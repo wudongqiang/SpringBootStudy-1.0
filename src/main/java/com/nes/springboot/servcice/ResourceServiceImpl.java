@@ -5,6 +5,7 @@ import com.nes.springboot.dao.ResourceDao;
 import com.nes.springboot.domain.Resource;
 import com.nes.springboot.util.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
@@ -100,7 +101,8 @@ public class ResourceServiceImpl implements ResourceService {
 
     @Override
     public List<Resource> findResourceAllDb() {
-        return resourceDao.findAll();
+        Sort sort = new Sort(Sort.Direction.ASC,"port");
+        return resourceDao.findAll(sort);
     }
 
     @Override

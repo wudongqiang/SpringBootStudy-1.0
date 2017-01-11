@@ -1,6 +1,7 @@
 package com.nes.springboot.dao;
 
 import com.nes.springboot.domain.Resource;
+import org.springframework.data.domain.Sort;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
@@ -10,5 +11,5 @@ import java.util.List;
  */
 public interface ResourceDao extends CrudRepository<Resource,String>{
 
-    List<Resource> findAll();
+    List<Resource> findAll(Sort sort);
 }

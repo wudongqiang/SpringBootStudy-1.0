@@ -1,10 +1,7 @@
 package com.nes.springboot.util;
 
-import com.fasterxml.jackson.core.JsonParser;
 import com.google.gson.Gson;
-import com.google.gson.stream.JsonReader;
 import com.nes.springboot.domain.Resource;
-import sun.plugin.javascript.navig.JSObject;
 
 import java.io.*;
 import java.net.URISyntaxException;
@@ -68,7 +65,7 @@ public class FileUtils {
         }
     }
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
 
         List<Resource> list = new ArrayList<>();
         list.add(new Resource(UUID.randomUUID().toString(),"xxxx","aaaa","8080"));
@@ -78,6 +75,6 @@ public class FileUtils {
 
         writeFile(gson.toJson(list));
         System.out.println(readFile());
-    }
+    }*/
 
 }
