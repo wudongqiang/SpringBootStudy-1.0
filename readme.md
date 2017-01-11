@@ -11,3 +11,15 @@
         <artifactId>h2</artifactId>  
     </dependency>  
 
+###1.2 springBoot打包
+    <build>
+         <!--打包后jar的名称-->
+         <finalName>api_server</finalName>
+         <plugins>
+             <!-- spring boot打包插件 -->
+             <plugin>
+                 <groupId>org.springframework.boot</groupId>
+                 <artifactId>spring-boot-maven-plugin</artifactId>
+             </plugin>
+         </plugins>
+     </build>
