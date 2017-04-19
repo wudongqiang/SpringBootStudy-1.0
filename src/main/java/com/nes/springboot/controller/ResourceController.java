@@ -4,6 +4,7 @@ import com.nes.springboot.domain.Resource;
 import com.nes.springboot.servcice.ResourceService;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -48,4 +49,8 @@ public class ResourceController {
         return new ResponseEntity(HttpStatus.OK);
     }
 
+    @GetMapping("/test")
+    public ResponseEntity test(@RequestParam("uuId") String uuId, Pageable pageable) {
+        return new ResponseEntity(resourceService.getResource(uuId), HttpStatus.OK);
+    }
 }

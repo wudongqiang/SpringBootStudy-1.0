@@ -1,12 +1,16 @@
 package com.nes.springboot.servcice;
 
-import com.google.gson.*;
+import com.google.gson.Gson;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonParser;
 import com.nes.springboot.dao.ResourceDao;
 import com.nes.springboot.domain.Resource;
 import com.nes.springboot.util.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 
 import java.util.ArrayList;
@@ -23,7 +27,7 @@ public class ResourceServiceImpl implements ResourceService {
     @Autowired
     private ResourceDao resourceDao;
 
-    private List<Resource> jsonArrayToList(String content){
+    private List<Resource> jsonArrayToList(String content) {
         List<Resource> resources = new ArrayList<>();
         Gson gson = new Gson();
         //创建一个JsonParser
@@ -38,14 +42,14 @@ public class ResourceServiceImpl implements ResourceService {
 //        }
         //把JsonElement对象转换成JsonArray
         JsonArray jsonArray = null;
-        if(el.isJsonArray()){
+        if (el.isJsonArray()) {
             jsonArray = el.getAsJsonArray();
         }
 
         //遍历JsonArray对象
         Iterator it = jsonArray.iterator();
-        while(it.hasNext()){
-            JsonElement e = (JsonElement)it.next();
+        while (it.hasNext()) {
+            JsonElement e = (JsonElement) it.next();
             //JsonElement转换为JavaBean对象
             resources.add(gson.fromJson(e, Resource.class));
         }
@@ -66,10 +70,10 @@ public class ResourceServiceImpl implements ResourceService {
     }
 
     @Override
-    public Resource getResource(String uuId){
+    public Resource getResource(String uuId) {
         List<Resource> resources = findResourceAll();
-        for(Resource resource : resources){
-            if(uuId.equals(resource.getUuId())){
+        for (Resource resource : resources) {
+            if (uuId.equals(resource.getUuId())) {
                 return resource;
             }
         }
@@ -77,10 +81,10 @@ public class ResourceServiceImpl implements ResourceService {
     }
 
     @Override
-    public void updateResource(Resource resource){
+    public void updateResource(Resource resource) {
         List<Resource> resources = findResourceAll();
-        for(Resource res : resources){
-            if(res.getUuId().equals(resource.getUuId())){
+        for (Resource res : resources) {
+            if (res.getUuId().equals(resource.getUuId())) {
                 res.setName(resource.getName());
                 res.setUrl(resource.getUrl());
             }
@@ -91,8 +95,8 @@ public class ResourceServiceImpl implements ResourceService {
     @Override
     public void deleteResource(String uuId) {
         List<Resource> resources = findResourceAll();
-        for(Resource res : resources){
-            if(res.getUuId().equals(uuId)){
+        for (Resource res : resources) {
+            if (res.getUuId().equals(uuId)) {
                 resources.remove(res);
             }
         }
@@ -101,13 +105,13 @@ public class ResourceServiceImpl implements ResourceService {
 
     @Override
     public List<Resource> findResourceAllDb() {
-        Sort sort = new Sort(Sort.Direction.ASC,"port");
+        Sort sort = new Sort(Sort.Direction.ASC, "port");
         return resourceDao.findAll(sort);
     }
 
     @Override
     public void addResourceDb(List<Resource> resources) {
-        resources.forEach(item ->{
+        resources.forEach(item -> {
             item.setUuId(UUID.randomUUID().toString());
             resourceDao.save(item);
         });
@@ -120,13 +124,19 @@ public class ResourceServiceImpl implements ResourceService {
 
     @Override
     public void updateResourceDb(Resource resource) {
-        if(!StringUtils.isEmpty(resource.getUuId())){
+        if (!StringUtils.isEmpty(resource.getUuId())) {
             resourceDao.save(resource);
         }
     }
 
     @Override
+    @Transactional
     public void deleteResourceDb(String uuId) {
+        Resource one = resourceDao.findOne(uuId);
+        String uuid = UUID.randomUUID().toString();
+        System.out.println(uuid);
+        Resource t = new Resource(uuid, one.getUrl(), one.getName(), one.getPort());
         resourceDao.delete(uuId);
+        resourceDao.save(t);
     }
 }

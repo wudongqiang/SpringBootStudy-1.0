@@ -26,14 +26,6 @@ public class StudyTest {
     @Autowired
     private ResourceService resourceService;
 
-
-    @Test
-    public void testServiceCall(){
-        List<Resource> result = resourceService.findResourceAll();
-        Assert.assertEquals("this is show method...",result);
-
-    }
-
     public static void main(String[] args) {
         String a = "a";
         change(a);
@@ -43,5 +35,18 @@ public class StudyTest {
     static void change(String a){
         a += "b";
         System.out.println(a);
+    }
+
+    @Test
+    public void testServiceCall() {
+        List<Resource> result = resourceService.findResourceAll();
+        Assert.assertEquals("this is show method...", result);
+
+    }
+
+    @Test
+    public void testDeleteTransaction() {
+        List<Resource> allDb = resourceService.findResourceAllDb();
+        resourceService.deleteResourceDb(allDb.get(0).getUuId());
     }
 }
