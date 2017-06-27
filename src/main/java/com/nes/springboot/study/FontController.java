@@ -14,6 +14,10 @@ public class FontController {
     public String index(ModelMap map){
         map.put("show","this is template demo");
         return "index";
+    }
 
+    @RequestMapping("/websocket")
+    public String webSocket() {
+        return "demo-web-socket";
     }
 }
