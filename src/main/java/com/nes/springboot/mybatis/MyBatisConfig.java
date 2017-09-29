@@ -1,5 +1,7 @@
 package com.nes.springboot.mybatis;
 
+import com.google.common.base.Joiner;
+import com.google.common.collect.ImmutableBiMap;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.SqlSessionTemplate;
@@ -12,6 +14,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.transaction.annotation.TransactionManagementConfigurer;
 
 import javax.sql.DataSource;
+import java.util.Map;
 
 
 //@Configuration
@@ -61,5 +64,12 @@ public class MyBatisConfig implements TransactionManagementConfigurer {
     @Override
     public PlatformTransactionManager annotationDrivenTransactionManager() {
         return new DataSourceTransactionManager(dataSource);
+    }
+
+    public static void main(String[] args) {
+        Joiner.MapJoiner joiner = Joiner.on("&").withKeyValueSeparator("=");
+        Map map = ImmutableBiMap.of("k1","v1","k2","v2");
+        String join = joiner.join(map);
+        System.out.println(join); //k1=v1&k2=v2
     }
 }
