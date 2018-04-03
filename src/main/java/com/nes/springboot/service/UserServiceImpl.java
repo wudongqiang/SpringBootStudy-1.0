@@ -31,6 +31,7 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public List<User> getUserAlls() {
+        int i=12/0;
         return jdbcTemplate.query("select id,age,name from user ;", new User());
     }
 
