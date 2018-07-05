@@ -5,5 +5,5 @@ package com.nes.springboot.service;
  */
 public interface HelloService {
 
-    String show();
+    String show(String name);
 }
