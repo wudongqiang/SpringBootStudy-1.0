@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.Optional;
 
 /**
  * Created by wdq on 16-11-9.
@@ -25,7 +26,12 @@ public class HelloController {
     }
 
     @RequestMapping("/users")
-    public List<User> users(@RequestParam Integer t){
-         return userService.getUserAlls();
+    public Optional<User> users(@RequestParam Long t){
+         return userService.getUserById(t);
+    }
+
+    @RequestMapping("/all")
+    public List<User> users(){
+        return userService.getUserAlls();
     }
 }

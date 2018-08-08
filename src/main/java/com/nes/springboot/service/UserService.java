@@ -3,6 +3,7 @@ package com.nes.springboot.service;
 import com.nes.springboot.domain.User;
 
 import java.util.List;
+import java.util.Optional;
 
 /**
  * Created by wdq on 16-11-9.
@@ -15,7 +16,7 @@ public interface UserService {
 
     List<User> getUserAlls();
 
-    User getUserById(Long id);
+    Optional<User> getUserById(Long id);
 
 
 

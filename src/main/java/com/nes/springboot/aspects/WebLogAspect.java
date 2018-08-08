@@ -6,6 +6,10 @@ import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
 /**
  * Created by wdq on 16-12-2.
  */
@@ -21,18 +25,32 @@ public class WebLogAspect {
     }
 
 
-    @After("execution(public * com.nes.springboot.service.*.*(..))")
+    @After(value = "execution(public * com.nes.springboot.service.*.*(..))")
     public void after() {
         System.out.println("--------方法执行后--------");
     }
 
-    @Around("execution(public * com.nes.springboot.service.*.*(..))")
+    @Around("execution(public * com.nes.springboot.service.*Service.*(..))")
     public Object around(ProceedingJoinPoint jp) throws Throwable {
         System.out.println("--------环绕前--------");
+        System.out.println(jp.getSignature().getName());
         System.out.println("方法" + jp.getSignature());
-        Object result = jp.proceed();
+
+        Class[] args = new Class[jp.getArgs().length];
+        int i=0;
+        for(Object obj:jp.getArgs()){
+            args[i++]=obj.getClass();
+        }
+        //得到方法返回值类型
+        System.out.println("方法返回值类型"+jp.getTarget().getClass()
+                .getMethod(jp.getSignature().getName(),args).getReturnType().getTypeName());
+      try{
+          return jp.proceed();
+      }catch(Exception e){
+          e.printStackTrace();
+      }
         System.out.println("--------环绕后--------");
-        return result;
+        return Optional.empty();
     }
 
     /**
