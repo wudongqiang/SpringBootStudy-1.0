@@ -34,6 +34,9 @@ public class UserController {
 
     //获取用户集
     @ApiOperation(value="获取用户列表", notes="这是说明")
+    @ApiResponses({
+            @ApiResponse(code = 200,examples = @Example(value ={ @ExampleProperty("aa"),@ExampleProperty("bb")}),message = "xx")
+    })
     @RequestMapping(value = "/list",method = RequestMethod.GET)
     public List<User> getUserList(){
         List<User> rs = new ArrayList<User>(users.values());

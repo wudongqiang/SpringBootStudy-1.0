@@ -30,11 +30,11 @@ public class UserServiceImpl implements UserService{
     @Override
     public List<User> getUserAlls() {
         int i=12/0;
-        return jdbcTemplate.query("select id,age,name from user ;", new User());
+        return null;//jdbcTemplate.query("select id,age,name from user ;", new User());
     }
 
     @Override
     public Optional<User> getUserById(Long id) {
-        return Optional.of(jdbcTemplate.queryForObject("select id,age,name from user where id=?", new Object[]{id},new User()));
+        return Optional.empty();//of(jdbcTemplate.queryForObject("select id,age,name from user where id=?", new Object[]{id},new User()));
     }
 }

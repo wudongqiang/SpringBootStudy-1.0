@@ -6,18 +6,19 @@ import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
 
 /**
  * Created by wdq on 16-11-10.
  */
-@ApiModel(value = "userModel")
-public class User implements RowMapper<User>{
+//@ApiModel(value = "userModel")
+public class User {//implements RowMapper<User>{
 
-    @ApiModelProperty(name = "id",value = "用户id",dataType = "Long")
+    @ApiModelProperty(name = "id",value = "用户id",dataType = "Long",example = "1")
     private Long id;
-    @ApiModelProperty(name = "name",value = "用户名称",dataType = "String")
+    @ApiModelProperty(name = "name",value = "用户名称",dataType = "String",example = "aa")
     private String name;
-    @ApiModelProperty(name = "age",value = "用户年龄",dataType = "Integer")
+    @ApiModelProperty(name = "age",value = "用户年龄",dataType = "Integer",example = "10")
     private Integer age;
 
     public Long getId() {
@@ -53,11 +54,12 @@ public class User implements RowMapper<User>{
                 '}';
     }
 
-    @Override
-    public User mapRow(ResultSet rs, int rowNum) throws SQLException {
-        this.setId(rs.getLong("id"));
-        this.setAge(rs.getInt("age"));
-        this.setName(rs.getString("name"));
-        return this;
-    }
+//    @Override
+//    public User mapRow(ResultSet rs, int rowNum) throws SQLException {
+//        this.setId(rs.getLong("id"));
+//        this.setAge(rs.getInt("age"));
+//        this.setName(rs.getString("name"));
+//        return this;
+//    }
+
 }

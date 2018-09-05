@@ -3,6 +3,7 @@ package com.nes.springboot.study;
 import com.nes.springboot.domain.User;
 import com.nes.springboot.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,17 +21,17 @@ public class HelloController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping("index")
+    @GetMapping("index")
     public String index(){
         return "hello spring boot";
     }
 
-    @RequestMapping("/users")
+    @GetMapping("/users")
     public Optional<User> users(@RequestParam Long t){
          return userService.getUserById(t);
     }
 
-    @RequestMapping("/all")
+    @GetMapping("/all")
     public List<User> users(){
         return userService.getUserAlls();
     }

@@ -2,6 +2,7 @@ package com.nes.springboot.study;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
@@ -10,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class FontController {
 
-    @RequestMapping("/")
+    @GetMapping("/")
     public String index(ModelMap map){
         map.put("show","this is template demo");
         return "index";
