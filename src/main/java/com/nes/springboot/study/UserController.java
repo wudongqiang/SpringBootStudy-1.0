@@ -73,6 +73,7 @@ public class UserController {
         User u = users.get(id);
         u.setAge(user.getAge());
         u.setName(user.getName());
+        u.setId(1111L);
         users.put(id,u);
         return "success";
     }
@@ -84,5 +85,17 @@ public class UserController {
         users.remove(id);
         return "success";
     }
+
+    /**
+     * test aspect aop only to spring bean
+     */
+    @Autowired
+    private User user;
+    @RequestMapping(value = "/test",method = RequestMethod.GET)
+    public String test() {
+        user.setId(1111L);
+        return "success";
+    }
+
 
 }

@@ -3,6 +3,7 @@ package com.nes.springboot.domain;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Component;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -12,6 +13,7 @@ import java.util.List;
  * Created by wdq on 16-11-10.
  */
 //@ApiModel(value = "userModel")
+    @Component
 public class User {//implements RowMapper<User>{
 
     @ApiModelProperty(name = "id",value = "用户id",dataType = "Long",example = "1")

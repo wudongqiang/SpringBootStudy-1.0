@@ -25,6 +25,12 @@ public class WebLogAspect {
     }
 
 
+    @Before(value = "execution(public * com.nes.springboot.domain.User.setId(..))")
+    public void doBeforeTest(JoinPoint joinPoint) {
+        logger.info("------方法执行前-User.setId-------");
+    }
+
+
     @After(value = "execution(public * com.nes.springboot.service.*.*(..))")
     public void after() {
         System.out.println("--------方法执行后--------");
