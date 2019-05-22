@@ -1,5 +1,6 @@
 package com.nes.springboot.study;
 
+import com.nes.springboot.domain.Teacher;
 import com.nes.springboot.domain.User;
 import io.swagger.annotations.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -91,9 +92,15 @@ public class UserController {
      */
     @Autowired
     private User user;
+
     @RequestMapping(value = "/test",method = RequestMethod.GET)
     public String test() {
         user.setId(1111L);
+
+        //test  原生的aspect
+        Teacher teacher = new Teacher();
+        teacher.setName("张老师");
+
         return "success";
     }
 

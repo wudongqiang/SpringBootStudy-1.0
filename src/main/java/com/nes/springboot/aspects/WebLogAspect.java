@@ -13,30 +13,30 @@ import java.util.Optional;
 /**
  * Created by wdq on 16-12-2.
  */
-@Aspect //标注为切面
-@Component //标注为bean,让其spring管理
+//@Aspect //标注为切面
+//@Component //标注为bean,让其spring管理
 public class WebLogAspect {
 
     private Logger logger = Logger.getLogger(WebLogAspect.class);
 
-    @Before("execution(public * com.nes.springboot.service.*.*(..))")
+//    @Before("execution(public * com.nes.springboot.service.*.*(..))")
     public void doBefore(JoinPoint joinPoint) {
         logger.info("------方法执行前--------");
     }
 
 
-    @Before(value = "execution(public * com.nes.springboot.domain.User.setId(..))")
+    //@Before(value = "execution(public * com.nes.springboot.domain.User.setId(..))")
     public void doBeforeTest(JoinPoint joinPoint) {
         logger.info("------方法执行前-User.setId-------");
     }
 
 
-    @After(value = "execution(public * com.nes.springboot.service.*.*(..))")
+   // @After(value = "execution(public * com.nes.springboot.service.*.*(..))")
     public void after() {
         System.out.println("--------方法执行后--------");
     }
 
-    @Around("execution(public * com.nes.springboot.service.*Service.*(..))")
+   // @Around("execution(public * com.nes.springboot.service.*Service.*(..))")
     public Object around(ProceedingJoinPoint jp) throws Throwable {
         System.out.println("--------环绕前--------");
         System.out.println(jp.getSignature().getName());
@@ -65,7 +65,7 @@ public class WebLogAspect {
      *
      * @param e 异常对象
      */
-    @AfterThrowing(value = "execution(public * com.nes.springboot.service.*.*(..))", throwing = "e")
+    //@AfterThrowing(value = "execution(public * com.nes.springboot.service.*.*(..))", throwing = "e")
     public void handle(JoinPoint point, Exception e) {
         System.out.println("---------异常环绕1----------");
         //e.printStackTrace();
