@@ -1,7 +1,9 @@
 package com.nes.springboot.study;
 
 import com.nes.springboot.domain.User;
+import com.nes.springboot.service.UserService;
 import io.swagger.annotations.*;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.*;
@@ -17,6 +19,8 @@ public class UserController {
     //创建线程安全的map
     private static Map<Long,User> users = Collections.synchronizedMap(new HashMap<Long, User>());
 
+    @Autowired
+    private UserService userService;
 
     //获取用户集
     @ApiOperation(value="获取用户列表", notes="这是说明")
@@ -66,6 +70,13 @@ public class UserController {
     public String remove(@PathVariable Long id) {
         users.remove(id);
         return "success";
+    }
+
+
+    @ApiOperation(value="获取所有用户信息")
+    @RequestMapping(value = "/db/all",method = RequestMethod.GET)
+    public List<User> getUserAlls() {
+        return userService.getUserAlls();
     }
 
 }
